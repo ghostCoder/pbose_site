@@ -1,52 +1,51 @@
 module.exports = {
   siteMetadata: {
-    title: 'Frontend Masters Gatsby Workshop',
-    description:
-      'A site we built together during a full-day Frontend Masters Gatsby workshop!',
+    title: "Poulsapart",
+    description: "Work in progress!"
   },
   plugins: [
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/layout.js'),
+          default: require.resolve("./src/components/layout.js")
         },
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-        plugins: [{ resolve: 'gatsby-remark-images' }],
-      },
+        gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
+        plugins: [{ resolve: "gatsby-remark-images" }]
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
-        path: 'posts',
-      },
+        name: "posts",
+        path: "posts"
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: 'images',
-      },
+        name: "images",
+        path: "images"
+      }
     },
     {
-      resolve: 'gatsby-source-instagram',
+      resolve: "gatsby-source-instagram",
       options: {
-        username: 'poulsapart',
-      },
+        username: "poulsapart"
+      }
     },
     {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      resolve: "gatsby-plugin-webpack-bundle-analyzer",
       options: {
         production: true,
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
-        analyzerMode: 'static',
-      },
-    },
-  ],
+        analyzerMode: "static"
+      }
+    }
+  ]
 };
