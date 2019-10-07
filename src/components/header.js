@@ -37,7 +37,7 @@ const Header = () => (
     `}
   >
     <NavLink to="/" fontWeight="bold">
-      FEM Workshop
+      Home
     </NavLink>
     <nav
       css={css`
